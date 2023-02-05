@@ -13,4 +13,12 @@ if (process.client) {
 }
 const runtimeConfig = useRuntimeConfig();
 console.log(runtimeConfig);
+
+// 获取appConfig
+const config = useAppConfig();
+console.log(config);
+
+onMounted(() => {
+  document.title = config.title
+})
 </script>
